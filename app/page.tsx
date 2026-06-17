@@ -25,29 +25,37 @@ const emptyAnnotations = (): Annotations => ({ gpt: [], claude: [], gemini: [] }
 const emptyNotes = (): Notes => ({ gpt: "", claude: "", gemini: "" })
 
 export default function Page() {
-  const [activeId, setActiveId] = useState(SAMPLE_ENTRIES[0].id)
+  const [activeId, setActiveId] = useState<string>(SAMPLE_ENTRIES[0].id)
   const [inputText, setInputText] = useState("")
-  const [entry, setEntry] = useState<SampleEntry>(SAMPLE_ENTRIES[0])
+  // 自定义原文（点击「解读对照」后生效），为 null 时展示当前示例原文
+  const [customText, setCustomText] = useState<string | null>(null)
   const [annotations, setAnnotations] = useState<Annotations>(emptyAnnotations)
   const [notes, setNotes] = useState<Notes>(emptyNotes)
 
+  // 单一数据源：entry 始终由 activeId 派生，避免状态不同步
+  const baseEntry = useMemo<SampleEntry>(
+    () => SAMPLE_ENTRIES.find((e) => e.id === activeId) ?? SAMPLE_ENTRIES[0],
+    [activeId],
+  )
+
+  const entry: SampleEntry = customText
+    ? {
+        ...baseEntry,
+        source: { title: "自定义文本", author: "—", text: customText },
+      }
+    : baseEntry
+
   const switchEntry = (e: SampleEntry) => {
     setActiveId(e.id)
-    setEntry(e)
     setInputText("")
+    setCustomText(null)
     setAnnotations(emptyAnnotations())
     setNotes(emptyNotes())
   }
 
   const runDemo = () => {
     // 原型：使用示例数据。若用户输入了文本，则以输入替换原文展示，解读仍用示例。
-    const base = SAMPLE_ENTRIES.find((e) => e.id === activeId) ?? SAMPLE_ENTRIES[0]
-    setEntry({
-      ...base,
-      source: inputText.trim()
-        ? { title: "自定义文本", author: "—", text: inputText.trim() }
-        : base.source,
-    })
+    setCustomText(inputText.trim() ? inputText.trim() : null)
     setAnnotations(emptyAnnotations())
     setNotes(emptyNotes())
   }
