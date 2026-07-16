@@ -1,33 +1,41 @@
-# ai-
+# AI 文化解释偏差研究
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+一个面向研究展示与申请材料的数字人文网站，用于呈现 GPT、Claude、Gemini 解释魏晋文本时的文化偏差结构。
 
-## Built with v0
+## 页面内容
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+- 三个模型六类偏差的总出现次数
+- 四类文本中的偏差分布
+- 以模型内部占比呈现的偏差结构雷达图
+- 伦理、社会、审美、典故四类代表案例
+- 研究结论、统计口径与材料来源
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_LYu6V6IdGXgK8qbg7OW4W0MQtgIe)
+## 数据来源
 
-## Getting Started
+- `data/research-stats.json`：由《不同LLM对魏晋文本分析文化偏差的数据统计.xlsx》Sheet1（A1:L46）整理而来，共 15 篇文本、45 条回答记录。
+- `data/cases.json`：依据 GPT、Claude、Gemini 原始回答文档整理的四个案例摘要与人工分析。
 
-First, run the development server:
+统计值均表示人工标注的“偏差出现次数”。0 表示未出现，大于 0 表示在回答中出现若干次。原始次数未按回答长度归一化，不用于模型能力排名。
+
+## 本地运行
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+访问 `http://localhost:3000`。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 构建
 
-## Learn More
+```bash
+pnpm build
+```
 
-To learn more, take a look at the following resources:
+项目使用 Next.js 静态导出，构建产物位于 `out/`。没有数据库、登录系统或 API，部署时只需托管静态文件。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+提交或发布前可运行数据一致性检查：
+
+```bash
+pnpm validate:data
+```

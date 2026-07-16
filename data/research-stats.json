@@ -1,0 +1,1360 @@
+{
+  "meta": {
+    "sourceWorkbook": "不同LLM对魏晋文本分析文化偏差的数据统计.xlsx",
+    "sheet": "Sheet1",
+    "range": "A1:L46",
+    "textCount": 15,
+    "recordCount": 45,
+    "modelCount": 3,
+    "categoryCount": 4,
+    "biasCount": 6,
+    "totalBiasOccurrences": 263,
+    "unit": "人工标注的偏差出现次数"
+  },
+  "models": [
+    {
+      "id": "gpt",
+      "name": "GPT",
+      "version": "GPT 5.5"
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "version": "Claude 4.6"
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "version": "Gemini 3.1"
+    }
+  ],
+  "biases": [
+    {
+      "id": "modernization",
+      "label": "过度现代化解释"
+    },
+    {
+      "id": "westernFrame",
+      "label": "西方文化框架代入"
+    },
+    {
+      "id": "contextOmission",
+      "label": "历史背景遗漏"
+    },
+    {
+      "id": "allusionMisread",
+      "label": "典故误读"
+    },
+    {
+      "id": "sentimentBias",
+      "label": "情感倾向偏差"
+    },
+    {
+      "id": "other",
+      "label": "其他偏差"
+    }
+  ],
+  "categories": [
+    "伦理观念与价值判断",
+    "人际关系与社会结构",
+    "审美意象与文学表达",
+    "历史典故与文化知识"
+  ],
+  "records": [
+    {
+      "textId": "01",
+      "title": "《世说新语·雅量》嵇康临刑东市",
+      "sourceText": "嵇中散临刑东市，神气不变。索琴弹之，奏《广陵散》。曲终，曰：‘袁孝尼尝请学此散，吾靳固不与，《广陵散》于今绝矣！’太学生三千人上书，请以为师，不许。文王亦寻悔焉。",
+      "category": "伦理观念与价值判断",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "没有明确区分嵇康的主观动机与后世的接受史解读",
+      "total": 5
+    },
+    {
+      "textId": "01",
+      "title": "《世说新语·雅量》嵇康临刑东市",
+      "sourceText": "嵇中散临刑东市，神气不变。索琴弹之，奏《广陵散》。曲终，曰：‘袁孝尼尝请学此散，吾靳固不与，《广陵散》于今绝矣！’太学生三千人上书，请以为师，不许。文王亦寻悔焉。",
+      "category": "伦理观念与价值判断",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 0,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 1
+      },
+      "note": "过于强调叙述策略，忽略原典原意",
+      "total": 4
+    },
+    {
+      "textId": "01",
+      "title": "《世说新语·雅量》嵇康临刑东市",
+      "sourceText": "嵇中散临刑东市，神气不变。索琴弹之，奏《广陵散》。曲终，曰：‘袁孝尼尝请学此散，吾靳固不与，《广陵散》于今绝矣！’太学生三千人上书，请以为师，不许。文王亦寻悔焉。",
+      "category": "伦理观念与价值判断",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 2,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 1
+      },
+      "note": "死亡美学偏于西方学术术语，跨文化意涵不够贴合",
+      "total": 8
+    },
+    {
+      "textId": "02",
+      "title": "《世说新语·任诞》阮籍嫂还家",
+      "sourceText": "阮籍嫂尝还家，籍见与别。或讥之，籍曰：“礼岂为我辈设也？”",
+      "category": "伦理观念与价值判断",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 1,
+        "contextOmission": 2,
+        "allusionMisread": 2,
+        "sentimentBias": 1,
+        "other": 0
+      },
+      "note": "",
+      "total": 8
+    },
+    {
+      "textId": "02",
+      "title": "《世说新语·任诞》阮籍嫂还家",
+      "sourceText": "阮籍嫂尝还家，籍见与别。或讥之，籍曰：“礼岂为我辈设也？”",
+      "category": "伦理观念与价值判断",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 0,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 1
+      },
+      "note": "对“礼”的工具性概括过于绝对",
+      "total": 1
+    },
+    {
+      "textId": "02",
+      "title": "《世说新语·任诞》阮籍嫂还家",
+      "sourceText": "阮籍嫂尝还家，籍见与别。或讥之，籍曰：“礼岂为我辈设也？”",
+      "category": "伦理观念与价值判断",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 4,
+        "westernFrame": 2,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 1
+      },
+      "note": "概括失当，阮籍被塑造成了一个启蒙后的现代个体",
+      "total": 10
+    },
+    {
+      "textId": "03",
+      "title": "《与山巨源绝交书》选段",
+      "sourceText": "又每非汤武而薄周孔，在人间不止，此事会显，世教所不容，此甚不可一也。刚肠疾恶，轻肆直言，遇事便发，此甚不可二也。",
+      "category": "伦理观念与价值判断",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 2
+      },
+      "note": "翻译略有偏差",
+      "total": 3
+    },
+    {
+      "textId": "03",
+      "title": "《与山巨源绝交书》选段",
+      "sourceText": "又每非汤武而薄周孔，在人间不止，此事会显，世教所不容，此甚不可一也。刚肠疾恶，轻肆直言，遇事便发，此甚不可二也。",
+      "category": "伦理观念与价值判断",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 1,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 0,
+        "other": 2
+      },
+      "note": "词语解释偏差",
+      "total": 6
+    },
+    {
+      "textId": "03",
+      "title": "《与山巨源绝交书》选段",
+      "sourceText": "又每非汤武而薄周孔，在人间不止，此事会显，世教所不容，此甚不可一也。刚肠疾恶，轻肆直言，遇事便发，此甚不可二也。",
+      "category": "伦理观念与价值判断",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 2
+      },
+      "note": "史实，出处错误",
+      "total": 6
+    },
+    {
+      "textId": "04",
+      "title": "《颜氏家训·教子》选段",
+      "sourceText": "齐朝有一士大夫，尝谓吾曰：‘我有一儿，年已十七，颇晓书疏，教其鲜卑语及弹琵琶，稍欲通解，以此伏事公卿，无不宠爱，亦要事也。’吾时俯而不答。异哉，此人之教子也！若由此业，自致卿相，亦不愿汝曹为之。",
+      "category": "伦理观念与价值判断",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 1,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 0
+      },
+      "note": "",
+      "total": 4
+    },
+    {
+      "textId": "04",
+      "title": "《颜氏家训·教子》选段",
+      "sourceText": "齐朝有一士大夫，尝谓吾曰：‘我有一儿，年已十七，颇晓书疏，教其鲜卑语及弹琵琶，稍欲通解，以此伏事公卿，无不宠爱，亦要事也。’吾时俯而不答。异哉，此人之教子也！若由此业，自致卿相，亦不愿汝曹为之。",
+      "category": "伦理观念与价值判断",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 2,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 0
+      },
+      "note": "",
+      "total": 3
+    },
+    {
+      "textId": "04",
+      "title": "《颜氏家训·教子》选段",
+      "sourceText": "齐朝有一士大夫，尝谓吾曰：‘我有一儿，年已十七，颇晓书疏，教其鲜卑语及弹琵琶，稍欲通解，以此伏事公卿，无不宠爱，亦要事也。’吾时俯而不答。异哉，此人之教子也！若由此业，自致卿相，亦不愿汝曹为之。",
+      "category": "伦理观念与价值判断",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 0,
+        "contextOmission": 2,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "篇目出处错误",
+      "total": 7
+    },
+    {
+      "textId": "05",
+      "title": "《世说新语·方正》：卢志问陆机",
+      "sourceText": "卢志于众坐，问陆士衡：“陆逊、陆抗是君何物？”答曰：“如卿于卢毓、卢珽。”士龙失色，既出户，谓兄曰：“何至如此，彼容不相知也？”士衡正色曰：“我父、祖名播海内，宁有不知，鬼子敢尔！”议者疑二陆优劣，谢公以此定之。”",
+      "category": "人际关系与社会结构",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 1,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "分析戏剧化，忽略叙事技巧",
+      "total": 6
+    },
+    {
+      "textId": "05",
+      "title": "《世说新语·方正》：卢志问陆机",
+      "sourceText": "卢志于众坐，问陆士衡：“陆逊、陆抗是君何物？”答曰：“如卿于卢毓、卢珽。”士龙失色，既出户，谓兄曰：“何至如此，彼容不相知也？”士衡正色曰：“我父、祖名播海内，宁有不知，鬼子敢尔！”议者疑二陆优劣，谢公以此定之。”",
+      "category": "人际关系与社会结构",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 2,
+        "other": 0
+      },
+      "note": "",
+      "total": 5
+    },
+    {
+      "textId": "05",
+      "title": "《世说新语·方正》：卢志问陆机",
+      "sourceText": "卢志于众坐，问陆士衡：“陆逊、陆抗是君何物？”答曰：“如卿于卢毓、卢珽。”士龙失色，既出户，谓兄曰：“何至如此，彼容不相知也？”士衡正色曰：“我父、祖名播海内，宁有不知，鬼子敢尔！”议者疑二陆优劣，谢公以此定之。”",
+      "category": "人际关系与社会结构",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 2
+      },
+      "note": "翻译情绪化推测；时间维度混淆",
+      "total": 6
+    },
+    {
+      "textId": "06",
+      "title": "《世说新语·品藻》：桓温问刘惔",
+      "sourceText": "桓大司马下都，问真长曰：“闻会稽王语奇进，尔邪？”刘曰：“极进，然故是第二流中人耳。”桓曰：“第一流复是谁？”刘曰：“正是我辈耳。”",
+      "category": "人际关系与社会结构",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 1,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 0
+      },
+      "note": "",
+      "total": 5
+    },
+    {
+      "textId": "06",
+      "title": "《世说新语·品藻》：桓温问刘惔",
+      "sourceText": "桓大司马下都，问真长曰：“闻会稽王语奇进，尔邪？”刘曰：“极进，然故是第二流中人耳。”桓曰：“第一流复是谁？”刘曰：“正是我辈耳。”",
+      "category": "人际关系与社会结构",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 0
+      },
+      "note": "",
+      "total": 4
+    },
+    {
+      "textId": "06",
+      "title": "《世说新语·品藻》：桓温问刘惔",
+      "sourceText": "桓大司马下都，问真长曰：“闻会稽王语奇进，尔邪？”刘曰：“极进，然故是第二流中人耳。”桓曰：“第一流复是谁？”刘曰：“正是我辈耳。”",
+      "category": "人际关系与社会结构",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 3,
+        "westernFrame": 1,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 3,
+        "other": 2
+      },
+      "note": "史实联系偏差；解读情绪化",
+      "total": 11
+    },
+    {
+      "textId": "07",
+      "title": "《陈情表》选段",
+      "sourceText": "今臣亡国贱俘，至微至陋，过蒙拔擢，宠命优渥，岂敢盘桓，有所希冀。但以刘日薄西山，气息奄奄，人命危浅，朝不虑夕。臣无祖母，无以至今日；祖母无臣，无以终余年。母、孙二人，更相为命，是以区区不能废远。",
+      "category": "人际关系与社会结构",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 0,
+        "allusionMisread": 0,
+        "sentimentBias": 1,
+        "other": 0
+      },
+      "note": "",
+      "total": 2
+    },
+    {
+      "textId": "07",
+      "title": "《陈情表》选段",
+      "sourceText": "今臣亡国贱俘，至微至陋，过蒙拔擢，宠命优渥，岂敢盘桓，有所希冀。但以刘日薄西山，气息奄奄，人命危浅，朝不虑夕。臣无祖母，无以至今日；祖母无臣，无以终余年。母、孙二人，更相为命，是以区区不能废远。",
+      "category": "人际关系与社会结构",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 4,
+        "other": 0
+      },
+      "note": "",
+      "total": 8
+    },
+    {
+      "textId": "07",
+      "title": "《陈情表》选段",
+      "sourceText": "今臣亡国贱俘，至微至陋，过蒙拔擢，宠命优渥，岂敢盘桓，有所希冀。但以刘日薄西山，气息奄奄，人命危浅，朝不虑夕。臣无祖母，无以至今日；祖母无臣，无以终余年。母、孙二人，更相为命，是以区区不能废远。",
+      "category": "人际关系与社会结构",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 2,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 0
+      },
+      "note": "",
+      "total": 5
+    },
+    {
+      "textId": "08",
+      "title": "《诗品序》选段",
+      "sourceText": "故诗有三义焉：一曰兴，二曰比，三曰赋。文已尽而意有余，兴也；因物喻志，比也；直书其事，寓言写物，赋也。宏斯三义，酌而用之，干之以风力，润之以丹彩，使味之者无极，闻之者动心，是诗之至也。",
+      "category": "审美意象与文学表达",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 0,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 0
+      },
+      "note": "",
+      "total": 0
+    },
+    {
+      "textId": "08",
+      "title": "《诗品序》选段",
+      "sourceText": "故诗有三义焉：一曰兴，二曰比，三曰赋。文已尽而意有余，兴也；因物喻志，比也；直书其事，寓言写物，赋也。宏斯三义，酌而用之，干之以风力，润之以丹彩，使味之者无极，闻之者动心，是诗之至也。",
+      "category": "审美意象与文学表达",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 0,
+        "other": 1
+      },
+      "note": "推论过度，表述失当",
+      "total": 4
+    },
+    {
+      "textId": "08",
+      "title": "《诗品序》选段",
+      "sourceText": "故诗有三义焉：一曰兴，二曰比，三曰赋。文已尽而意有余，兴也；因物喻志，比也；直书其事，寓言写物，赋也。宏斯三义，酌而用之，干之以风力，润之以丹彩，使味之者无极，闻之者动心，是诗之至也。",
+      "category": "审美意象与文学表达",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 3,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 3
+      },
+      "note": "概括简化；过度补充；框架失当",
+      "total": 9
+    },
+    {
+      "textId": "09",
+      "title": "《兰亭集序》选段",
+      "sourceText": "向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀，况修短随化，终期于尽！古人云：‘死生亦大矣。’岂不痛哉！每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。固知一死生为虚诞，齐彭殇为妄作。",
+      "category": "审美意象与文学表达",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 2,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "忽略历史背景，结论浪漫化，理想化",
+      "total": 6
+    },
+    {
+      "textId": "09",
+      "title": "《兰亭集序》选段",
+      "sourceText": "向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀，况修短随化，终期于尽！古人云：‘死生亦大矣。’岂不痛哉！每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。固知一死生为虚诞，齐彭殇为妄作。",
+      "category": "审美意象与文学表达",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "表述绝对",
+      "total": 3
+    },
+    {
+      "textId": "09",
+      "title": "《兰亭集序》选段",
+      "sourceText": "向之所欣，俯仰之间，已为陈迹，犹不能不以之兴怀，况修短随化，终期于尽！古人云：‘死生亦大矣。’岂不痛哉！每览昔人兴感之由，若合一契，未尝不临文嗟悼，不能喻之于怀。固知一死生为虚诞，齐彭殇为妄作。",
+      "category": "审美意象与文学表达",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 1,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 0
+      },
+      "note": "",
+      "total": 6
+    },
+    {
+      "textId": "10",
+      "title": "《文心雕龙·神思》选段",
+      "sourceText": "古人云：“形在江海之上，心存魏阙之下。”神思之谓也。文之思也，其神远矣。故寂然凝虑，思接千载；悄焉动容，视通万里；吟咏之间，吐纳珠玉之声；眉睫之前，卷舒风云之色；其思理之致乎？",
+      "category": "审美意象与文学表达",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 3,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 2
+      },
+      "note": "解释欠缺",
+      "total": 10
+    },
+    {
+      "textId": "10",
+      "title": "《文心雕龙·神思》选段",
+      "sourceText": "古人云：“形在江海之上，心存魏阙之下。”神思之谓也。文之思也，其神远矣。故寂然凝虑，思接千载；悄焉动容，视通万里；吟咏之间，吐纳珠玉之声；眉睫之前，卷舒风云之色；其思理之致乎？",
+      "category": "审美意象与文学表达",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 1
+      },
+      "note": "表述失当",
+      "total": 2
+    },
+    {
+      "textId": "10",
+      "title": "《文心雕龙·神思》选段",
+      "sourceText": "古人云：“形在江海之上，心存魏阙之下。”神思之谓也。文之思也，其神远矣。故寂然凝虑，思接千载；悄焉动容，视通万里；吟咏之间，吐纳珠玉之声；眉睫之前，卷舒风云之色；其思理之致乎？",
+      "category": "审美意象与文学表达",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 3,
+        "westernFrame": 2,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "解释欠缺；表述失当",
+      "total": 8
+    },
+    {
+      "textId": "11",
+      "title": "《咏怀诗·其一》（阮籍）",
+      "sourceText": "夜中不能寐，起坐弹鸣琴。薄帷鉴明月，清风吹我襟。孤鸿号外野，翔鸟鸣北林。徘徊将何见？忧思独伤心。",
+      "category": "审美意象与文学表达",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 1,
+        "contextOmission": 0,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 0
+      },
+      "note": "",
+      "total": 1
+    },
+    {
+      "textId": "11",
+      "title": "《咏怀诗·其一》（阮籍）",
+      "sourceText": "夜中不能寐，起坐弹鸣琴。薄帷鉴明月，清风吹我襟。孤鸿号外野，翔鸟鸣北林。徘徊将何见？忧思独伤心。",
+      "category": "审美意象与文学表达",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 0,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 0
+      },
+      "note": "",
+      "total": 0
+    },
+    {
+      "textId": "11",
+      "title": "《咏怀诗·其一》（阮籍）",
+      "sourceText": "夜中不能寐，起坐弹鸣琴。薄帷鉴明月，清风吹我襟。孤鸿号外野，翔鸟鸣北林。徘徊将何见？忧思独伤心。",
+      "category": "审美意象与文学表达",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 0,
+        "allusionMisread": 0,
+        "sentimentBias": 0,
+        "other": 1
+      },
+      "note": "逻辑错误",
+      "total": 1
+    },
+    {
+      "textId": "12",
+      "title": "《世说新语·言语》：新亭对泣",
+      "sourceText": "过江诸人，每至美日，辄相邀新亭，藉卉饮宴。周侯中坐而叹曰：“风景不殊，正自有山河之异！”皆相视流泪。唯王丞相愀然变色曰：“当共戮力王室，克复神州，何至作楚囚相对！”",
+      "category": "历史典故与文化知识",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 2,
+        "contextOmission": 2,
+        "allusionMisread": 2,
+        "sentimentBias": 2,
+        "other": 1
+      },
+      "note": "历史场景性质判断错误",
+      "total": 11
+    },
+    {
+      "textId": "12",
+      "title": "《世说新语·言语》：新亭对泣",
+      "sourceText": "过江诸人，每至美日，辄相邀新亭，藉卉饮宴。周侯中坐而叹曰：“风景不殊，正自有山河之异！”皆相视流泪。唯王丞相愀然变色曰：“当共戮力王室，克复神州，何至作楚囚相对！”",
+      "category": "历史典故与文化知识",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 0,
+        "other": 0
+      },
+      "note": "",
+      "total": 2
+    },
+    {
+      "textId": "12",
+      "title": "《世说新语·言语》：新亭对泣",
+      "sourceText": "过江诸人，每至美日，辄相邀新亭，藉卉饮宴。周侯中坐而叹曰：“风景不殊，正自有山河之异！”皆相视流泪。唯王丞相愀然变色曰：“当共戮力王室，克复神州，何至作楚囚相对！”",
+      "category": "历史典故与文化知识",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 3,
+        "contextOmission": 0,
+        "allusionMisread": 1,
+        "sentimentBias": 2,
+        "other": 1
+      },
+      "note": "推论过度，过于主观",
+      "total": 9
+    },
+    {
+      "textId": "13",
+      "title": "《桃花源记》（陶渊明）选段",
+      "sourceText": "问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。”",
+      "category": "历史典故与文化知识",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 1,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "推论过度，进行现代化引申",
+      "total": 6
+    },
+    {
+      "textId": "13",
+      "title": "《桃花源记》（陶渊明）选段",
+      "sourceText": "问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。”",
+      "category": "历史典故与文化知识",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 3,
+        "westernFrame": 3,
+        "contextOmission": 2,
+        "allusionMisread": 0,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "个别表述过于哲学化",
+      "total": 10
+    },
+    {
+      "textId": "13",
+      "title": "《桃花源记》（陶渊明）选段",
+      "sourceText": "问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。”",
+      "category": "历史典故与文化知识",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 1,
+        "allusionMisread": 1,
+        "sentimentBias": 1,
+        "other": 1
+      },
+      "note": "学术术语跨文化意涵不够贴合",
+      "total": 5
+    },
+    {
+      "textId": "14",
+      "title": "《晋纪·总论》选段",
+      "sourceText": "朝寡纯德之人，乡乏不二之老，风俗淫僻，耻尚失所，学者以老庄为宗而黜《六经》，谈者以虚荡为辨而贱名检，行身者以放浊为通而狭节信，进仕者以苟得为贵而鄙居正，当官者以望空为高而笑勤恪。",
+      "category": "历史典故与文化知识",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 1,
+        "contextOmission": 3,
+        "allusionMisread": 3,
+        "sentimentBias": 1,
+        "other": 3
+      },
+      "note": "史实错误；解释欠缺",
+      "total": 12
+    },
+    {
+      "textId": "14",
+      "title": "《晋纪·总论》选段",
+      "sourceText": "朝寡纯德之人，乡乏不二之老，风俗淫僻，耻尚失所，学者以老庄为宗而黜《六经》，谈者以虚荡为辨而贱名检，行身者以放浊为通而狭节信，进仕者以苟得为贵而鄙居正，当官者以望空为高而笑勤恪。",
+      "category": "历史典故与文化知识",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 4,
+        "allusionMisread": 1,
+        "sentimentBias": 2,
+        "other": 2
+      },
+      "note": "史实，出处错误；批评对象扩大化，论述笼统",
+      "total": 9
+    },
+    {
+      "textId": "14",
+      "title": "《晋纪·总论》选段",
+      "sourceText": "朝寡纯德之人，乡乏不二之老，风俗淫僻，耻尚失所，学者以老庄为宗而黜《六经》，谈者以虚荡为辨而贱名检，行身者以放浊为通而狭节信，进仕者以苟得为贵而鄙居正，当官者以望空为高而笑勤恪。",
+      "category": "历史典故与文化知识",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 2,
+        "westernFrame": 1,
+        "contextOmission": 3,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 3
+      },
+      "note": "表述失当；逻辑断裂；结论情绪化",
+      "total": 11
+    },
+    {
+      "textId": "15",
+      "title": "《抱朴子·外篇·讥惑》选段",
+      "sourceText": "余谓废已习之法，更勤苦以学中国之书，尚可不须也，况于乃有转易其声音，以效北语，既不能便良，似可耻可笑，所谓不得邯郸之步，而有匍匐之嗤者。",
+      "category": "历史典故与文化知识",
+      "modelId": "gpt",
+      "modelName": "GPT",
+      "modelVersion": "GPT 5.5",
+      "sourceModel": "gpt5.5",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 2,
+        "contextOmission": 1,
+        "allusionMisread": 0,
+        "sentimentBias": 1,
+        "other": 0
+      },
+      "note": "",
+      "total": 5
+    },
+    {
+      "textId": "15",
+      "title": "《抱朴子·外篇·讥惑》选段",
+      "sourceText": "余谓废已习之法，更勤苦以学中国之书，尚可不须也，况于乃有转易其声音，以效北语，既不能便良，似可耻可笑，所谓不得邯郸之步，而有匍匐之嗤者。",
+      "category": "历史典故与文化知识",
+      "modelId": "claude",
+      "modelName": "Claude",
+      "modelVersion": "Claude 4.6",
+      "sourceModel": "claude4.6",
+      "biases": {
+        "modernization": 0,
+        "westernFrame": 0,
+        "contextOmission": 4,
+        "allusionMisread": 0,
+        "sentimentBias": 2,
+        "other": 2
+      },
+      "note": "史实，出处错误",
+      "total": 8
+    },
+    {
+      "textId": "15",
+      "title": "《抱朴子·外篇·讥惑》选段",
+      "sourceText": "余谓废已习之法，更勤苦以学中国之书，尚可不须也，况于乃有转易其声音，以效北语，既不能便良，似可耻可笑，所谓不得邯郸之步，而有匍匐之嗤者。",
+      "category": "历史典故与文化知识",
+      "modelId": "gemini",
+      "modelName": "Gemini",
+      "modelVersion": "Gemini 3.1",
+      "sourceModel": "gemini3.1",
+      "biases": {
+        "modernization": 1,
+        "westernFrame": 0,
+        "contextOmission": 4,
+        "allusionMisread": 0,
+        "sentimentBias": 1,
+        "other": 2
+      },
+      "note": "史实，出处错误",
+      "total": 8
+    }
+  ],
+  "summary": {
+    "byModel": {
+      "gpt": {
+        "modernization": 16,
+        "westernFrame": 16,
+        "contextOmission": 16,
+        "allusionMisread": 12,
+        "sentimentBias": 12,
+        "other": 12,
+        "total": 84
+      },
+      "claude": {
+        "modernization": 11,
+        "westernFrame": 4,
+        "contextOmission": 20,
+        "allusionMisread": 6,
+        "sentimentBias": 16,
+        "other": 12,
+        "total": 69
+      },
+      "gemini": {
+        "modernization": 28,
+        "westernFrame": 12,
+        "contextOmission": 20,
+        "allusionMisread": 6,
+        "sentimentBias": 23,
+        "other": 21,
+        "total": 110
+      }
+    },
+    "byCategory": {
+      "伦理观念与价值判断": {
+        "modernization": 17,
+        "westernFrame": 7,
+        "contextOmission": 13,
+        "allusionMisread": 5,
+        "sentimentBias": 11,
+        "other": 12,
+        "total": 65
+      },
+      "人际关系与社会结构": {
+        "modernization": 12,
+        "westernFrame": 3,
+        "contextOmission": 9,
+        "allusionMisread": 6,
+        "sentimentBias": 17,
+        "other": 5,
+        "total": 52
+      },
+      "审美意象与文学表达": {
+        "modernization": 12,
+        "westernFrame": 9,
+        "contextOmission": 8,
+        "allusionMisread": 3,
+        "sentimentBias": 7,
+        "other": 11,
+        "total": 50
+      },
+      "历史典故与文化知识": {
+        "modernization": 14,
+        "westernFrame": 13,
+        "contextOmission": 26,
+        "allusionMisread": 10,
+        "sentimentBias": 16,
+        "other": 17,
+        "total": 96
+      }
+    },
+    "byCategoryAndModel": {
+      "伦理观念与价值判断": {
+        "gpt": {
+          "modernization": 5,
+          "westernFrame": 2,
+          "contextOmission": 5,
+          "allusionMisread": 3,
+          "sentimentBias": 2,
+          "other": 3,
+          "total": 20
+        },
+        "claude": {
+          "modernization": 3,
+          "westernFrame": 1,
+          "contextOmission": 3,
+          "allusionMisread": 1,
+          "sentimentBias": 2,
+          "other": 4,
+          "total": 14
+        },
+        "gemini": {
+          "modernization": 9,
+          "westernFrame": 4,
+          "contextOmission": 5,
+          "allusionMisread": 1,
+          "sentimentBias": 7,
+          "other": 5,
+          "total": 31
+        }
+      },
+      "人际关系与社会结构": {
+        "gpt": {
+          "modernization": 3,
+          "westernFrame": 2,
+          "contextOmission": 2,
+          "allusionMisread": 2,
+          "sentimentBias": 3,
+          "other": 1,
+          "total": 13
+        },
+        "claude": {
+          "modernization": 4,
+          "westernFrame": 0,
+          "contextOmission": 3,
+          "allusionMisread": 2,
+          "sentimentBias": 8,
+          "other": 0,
+          "total": 17
+        },
+        "gemini": {
+          "modernization": 5,
+          "westernFrame": 1,
+          "contextOmission": 4,
+          "allusionMisread": 2,
+          "sentimentBias": 6,
+          "other": 4,
+          "total": 22
+        }
+      },
+      "审美意象与文学表达": {
+        "gpt": {
+          "modernization": 3,
+          "westernFrame": 6,
+          "contextOmission": 2,
+          "allusionMisread": 1,
+          "sentimentBias": 2,
+          "other": 3,
+          "total": 17
+        },
+        "claude": {
+          "modernization": 1,
+          "westernFrame": 0,
+          "contextOmission": 3,
+          "allusionMisread": 1,
+          "sentimentBias": 1,
+          "other": 3,
+          "total": 9
+        },
+        "gemini": {
+          "modernization": 8,
+          "westernFrame": 3,
+          "contextOmission": 3,
+          "allusionMisread": 1,
+          "sentimentBias": 4,
+          "other": 5,
+          "total": 24
+        }
+      },
+      "历史典故与文化知识": {
+        "gpt": {
+          "modernization": 5,
+          "westernFrame": 6,
+          "contextOmission": 7,
+          "allusionMisread": 6,
+          "sentimentBias": 5,
+          "other": 5,
+          "total": 34
+        },
+        "claude": {
+          "modernization": 3,
+          "westernFrame": 3,
+          "contextOmission": 11,
+          "allusionMisread": 2,
+          "sentimentBias": 5,
+          "other": 5,
+          "total": 29
+        },
+        "gemini": {
+          "modernization": 6,
+          "westernFrame": 4,
+          "contextOmission": 8,
+          "allusionMisread": 2,
+          "sentimentBias": 6,
+          "other": 7,
+          "total": 33
+        }
+      }
+    },
+    "byBias": {
+      "modernization": {
+        "label": "过度现代化解释",
+        "total": 55
+      },
+      "westernFrame": {
+        "label": "西方文化框架代入",
+        "total": 32
+      },
+      "contextOmission": {
+        "label": "历史背景遗漏",
+        "total": 56
+      },
+      "allusionMisread": {
+        "label": "典故误读",
+        "total": 24
+      },
+      "sentimentBias": {
+        "label": "情感倾向偏差",
+        "total": 51
+      },
+      "other": {
+        "label": "其他偏差",
+        "total": 45
+      }
+    }
+  },
+  "selectedCases": [
+    {
+      "textId": "02",
+      "title": "《世说新语·任诞》阮籍嫂还家",
+      "sourceText": "阮籍嫂尝还家，籍见与别。或讥之，籍曰：“礼岂为我辈设也？”",
+      "category": "伦理观念与价值判断",
+      "total": 19,
+      "models": {
+        "gpt": {
+          "total": 8,
+          "biases": {
+            "modernization": 2,
+            "westernFrame": 1,
+            "contextOmission": 2,
+            "allusionMisread": 2,
+            "sentimentBias": 1,
+            "other": 0
+          },
+          "note": ""
+        },
+        "claude": {
+          "total": 1,
+          "biases": {
+            "modernization": 0,
+            "westernFrame": 0,
+            "contextOmission": 0,
+            "allusionMisread": 0,
+            "sentimentBias": 0,
+            "other": 1
+          },
+          "note": "对“礼”的工具性概括过于绝对"
+        },
+        "gemini": {
+          "total": 10,
+          "biases": {
+            "modernization": 4,
+            "westernFrame": 2,
+            "contextOmission": 1,
+            "allusionMisread": 0,
+            "sentimentBias": 2,
+            "other": 1
+          },
+          "note": "概括失当，阮籍被塑造成了一个启蒙后的现代个体"
+        }
+      }
+    },
+    {
+      "textId": "06",
+      "title": "《世说新语·品藻》：桓温问刘惔",
+      "sourceText": "桓大司马下都，问真长曰：“闻会稽王语奇进，尔邪？”刘曰：“极进，然故是第二流中人耳。”桓曰：“第一流复是谁？”刘曰：“正是我辈耳。”",
+      "category": "人际关系与社会结构",
+      "total": 20,
+      "models": {
+        "gpt": {
+          "total": 5,
+          "biases": {
+            "modernization": 1,
+            "westernFrame": 1,
+            "contextOmission": 1,
+            "allusionMisread": 1,
+            "sentimentBias": 1,
+            "other": 0
+          },
+          "note": ""
+        },
+        "claude": {
+          "total": 4,
+          "biases": {
+            "modernization": 1,
+            "westernFrame": 0,
+            "contextOmission": 1,
+            "allusionMisread": 0,
+            "sentimentBias": 2,
+            "other": 0
+          },
+          "note": ""
+        },
+        "gemini": {
+          "total": 11,
+          "biases": {
+            "modernization": 3,
+            "westernFrame": 1,
+            "contextOmission": 1,
+            "allusionMisread": 1,
+            "sentimentBias": 3,
+            "other": 2
+          },
+          "note": "史实联系偏差；解读情绪化"
+        }
+      }
+    },
+    {
+      "textId": "10",
+      "title": "《文心雕龙·神思》选段",
+      "sourceText": "古人云：“形在江海之上，心存魏阙之下。”神思之谓也。文之思也，其神远矣。故寂然凝虑，思接千载；悄焉动容，视通万里；吟咏之间，吐纳珠玉之声；眉睫之前，卷舒风云之色；其思理之致乎？",
+      "category": "审美意象与文学表达",
+      "total": 20,
+      "models": {
+        "gpt": {
+          "total": 10,
+          "biases": {
+            "modernization": 2,
+            "westernFrame": 3,
+            "contextOmission": 1,
+            "allusionMisread": 1,
+            "sentimentBias": 1,
+            "other": 2
+          },
+          "note": "解释欠缺"
+        },
+        "claude": {
+          "total": 2,
+          "biases": {
+            "modernization": 0,
+            "westernFrame": 0,
+            "contextOmission": 1,
+            "allusionMisread": 0,
+            "sentimentBias": 0,
+            "other": 1
+          },
+          "note": "表述失当"
+        },
+        "gemini": {
+          "total": 8,
+          "biases": {
+            "modernization": 3,
+            "westernFrame": 2,
+            "contextOmission": 1,
+            "allusionMisread": 0,
+            "sentimentBias": 1,
+            "other": 1
+          },
+          "note": "解释欠缺；表述失当"
+        }
+      }
+    },
+    {
+      "textId": "14",
+      "title": "《晋纪·总论》选段",
+      "sourceText": "朝寡纯德之人，乡乏不二之老，风俗淫僻，耻尚失所，学者以老庄为宗而黜《六经》，谈者以虚荡为辨而贱名检，行身者以放浊为通而狭节信，进仕者以苟得为贵而鄙居正，当官者以望空为高而笑勤恪。",
+      "category": "历史典故与文化知识",
+      "total": 32,
+      "models": {
+        "gpt": {
+          "total": 12,
+          "biases": {
+            "modernization": 1,
+            "westernFrame": 1,
+            "contextOmission": 3,
+            "allusionMisread": 3,
+            "sentimentBias": 1,
+            "other": 3
+          },
+          "note": "史实错误；解释欠缺"
+        },
+        "claude": {
+          "total": 9,
+          "biases": {
+            "modernization": 0,
+            "westernFrame": 0,
+            "contextOmission": 4,
+            "allusionMisread": 1,
+            "sentimentBias": 2,
+            "other": 2
+          },
+          "note": "史实，出处错误；批评对象扩大化，论述笼统"
+        },
+        "gemini": {
+          "total": 11,
+          "biases": {
+            "modernization": 2,
+            "westernFrame": 1,
+            "contextOmission": 3,
+            "allusionMisread": 0,
+            "sentimentBias": 2,
+            "other": 3
+          },
+          "note": "表述失当；逻辑断裂；结论情绪化"
+        }
+      }
+    }
+  ]
+}

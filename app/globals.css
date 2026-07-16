@@ -5,10 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-heading: var(--font-serif-sc), 'Geist Fallback';
-  --font-serif: var(--font-serif-sc), 'Geist Fallback';
-  --font-sans: var(--font-sans-sc), 'Geist Fallback';
-  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+  --font-heading: var(--font-serif-sc);
+  --font-serif: var(--font-serif-sc);
+  --font-sans: var(--font-sans-sc);
+  --font-mono: var(--font-mono-sc);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -17,6 +17,7 @@
   --color-sidebar-primary: var(--sidebar-primary);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
+  --color-chart-6: var(--chart-6);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
@@ -45,40 +46,39 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 :root {
   color-scheme: light;
-  /* 宣纸米色背景 - 古典学术风格 */
+  --font-serif-sc: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif;
+  --font-sans-sc: 'Noto Sans SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+  --font-mono-sc: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --background: oklch(0.965 0.012 85);
-  /* 墨色文字 */
   --foreground: oklch(0.255 0.012 60);
   --card: oklch(0.99 0.008 85);
   --card-foreground: oklch(0.255 0.012 60);
   --popover: oklch(0.99 0.008 85);
   --popover-foreground: oklch(0.255 0.012 60);
-  /* 朱砂红主色 */
   --primary: oklch(0.5 0.16 32);
-  --primary-foreground: oklch(0.98 0.01 85);
-  --secondary: oklch(0.92 0.015 80);
+  --primary-foreground: oklch(0.985 0.008 85);
+  --secondary: oklch(0.925 0.016 80);
   --secondary-foreground: oklch(0.3 0.012 60);
   --muted: oklch(0.93 0.012 82);
-  --muted-foreground: oklch(0.5 0.012 60);
-  /* 黛青色点缀 */
-  --accent: oklch(0.45 0.045 200);
+  --muted-foreground: oklch(0.49 0.014 60);
+  --accent: oklch(0.44 0.05 205);
   --accent-foreground: oklch(0.98 0.01 85);
   --destructive: oklch(0.55 0.2 28);
-  --border: oklch(0.86 0.015 75);
+  --border: oklch(0.855 0.017 75);
+  --border-strong: oklch(0.74 0.02 72);
   --input: oklch(0.86 0.015 75);
   --ring: oklch(0.5 0.16 32);
   --chart-1: oklch(0.5 0.16 32);
-  --chart-2: oklch(0.45 0.045 200);
-  --chart-3: oklch(0.6 0.1 60);
-  --chart-4: oklch(0.45 0.08 140);
-  --chart-5: oklch(0.4 0.012 60);
-  --radius: 0.25rem;
+  --chart-2: oklch(0.43 0.055 205);
+  --chart-3: oklch(0.62 0.105 62);
+  --chart-4: oklch(0.49 0.085 145);
+  --chart-5: oklch(0.38 0.018 60);
+  --chart-6: oklch(0.68 0.055 330);
+  --radius: 0.3rem;
   --sidebar: oklch(0.95 0.012 85);
   --sidebar-foreground: oklch(0.255 0.012 60);
   --sidebar-primary: oklch(0.5 0.16 32);
@@ -89,86 +89,232 @@
   --sidebar-ring: oklch(0.5 0.16 32);
 }
 
-.dark {
-  color-scheme: dark;
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    color-scheme: dark;
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
-  }
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
+
   html {
-    @apply font-sans;
+    @apply scroll-smooth font-sans;
+    background: var(--background);
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    min-width: 320px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 18%, transparent);
+  }
+
+  section[id] {
+    scroll-margin-top: 72px;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative py-2 transition-colors hover:text-foreground;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-px w-0 bg-primary transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .hero-paper {
+    background:
+      radial-gradient(circle at 84% 19%, color-mix(in oklab, var(--primary) 8%, transparent) 0, transparent 27%),
+      linear-gradient(140deg, var(--card) 0%, var(--background) 55%, color-mix(in oklab, var(--secondary) 75%, white) 100%);
+  }
+
+  .hero-paper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.42;
+    background-image:
+      linear-gradient(color-mix(in oklab, var(--foreground) 3%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in oklab, var(--foreground) 2%, transparent) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent 90%);
+  }
+
+  .hero-grid::after {
+    content: '魏\A 晋\A 文\A 本';
+    white-space: pre;
+    position: absolute;
+    right: max(1.5rem, calc((100vw - 1280px) / 2 - 1rem));
+    top: 7rem;
+    font-family: var(--font-serif-sc);
+    font-size: clamp(4rem, 8vw, 8rem);
+    line-height: 0.92;
+    color: color-mix(in oklab, var(--foreground) 3.5%, transparent);
+    letter-spacing: 0.08em;
+    pointer-events: none;
+  }
+
+  .ink-card {
+    @apply rounded-sm border border-border bg-card/90;
+    box-shadow: 12px 12px 0 color-mix(in oklab, var(--foreground) 5%, transparent);
+  }
+
+  .stat-cell {
+    @apply flex flex-col items-center bg-card px-2 py-5 text-center;
+  }
+
+  .stat-cell strong {
+    @apply font-serif text-2xl font-semibold text-primary sm:text-3xl;
+  }
+
+  .stat-cell span {
+    @apply mt-1 text-[11px] text-muted-foreground;
+  }
+
+  .primary-link,
+  .secondary-link {
+    @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-sm px-5 text-sm font-medium transition-all;
+  }
+
+  .primary-link {
+    @apply bg-primary text-primary-foreground shadow-sm hover:-translate-y-0.5 hover:shadow-md;
+  }
+
+  .secondary-link {
+    @apply border border-border bg-card text-foreground hover:border-primary hover:text-primary;
+  }
+
+  .section-shell {
+    @apply mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:py-24;
+  }
+
+  .section-kicker {
+    @apply mb-4 text-xs font-medium tracking-[0.2em] text-primary;
+  }
+
+  .section-heading h2 {
+    @apply font-serif text-3xl font-semibold leading-snug tracking-wide text-foreground sm:text-4xl;
+  }
+
+  .concept-cell {
+    @apply bg-card p-6 sm:p-7;
+  }
+
+  .concept-cell > span {
+    @apply font-serif text-xl text-primary/45;
+  }
+
+  .concept-cell h3 {
+    @apply mt-6 font-serif text-lg font-semibold text-foreground;
+  }
+
+  .concept-cell p {
+    @apply mt-3 text-sm leading-7 text-muted-foreground;
+  }
+
+  .research-card {
+    @apply rounded-sm border border-border bg-card;
+    box-shadow: 0 1px 0 color-mix(in oklab, var(--foreground) 4%, transparent), 0 10px 32px color-mix(in oklab, var(--foreground) 3%, transparent);
+  }
+
+  .chart-blossom {
+    @apply absolute right-5 top-4 flex h-8 w-8 items-center justify-center rounded-full border border-primary/20 font-serif text-sm text-primary/55;
+  }
+
+  .finding-card {
+    @apply rounded-sm border border-border bg-card p-5;
+  }
+
+  .finding-card > span {
+    @apply text-[11px] tracking-[0.14em] text-muted-foreground;
+  }
+
+  .finding-card strong {
+    @apply mt-3 block font-serif text-lg font-semibold text-foreground;
+  }
+
+  .finding-card p {
+    @apply mt-2 text-xs leading-6 text-muted-foreground;
+  }
+
+  .method-note {
+    @apply grid gap-2 rounded-sm border border-dashed border-border bg-secondary/35 px-5 py-4 text-sm sm:grid-cols-[6rem_1fr];
+  }
+
+  .method-note strong {
+    @apply font-serif text-foreground;
+  }
+
+  .method-note p {
+    @apply leading-7 text-muted-foreground;
+  }
+
+  .bias-tag {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/50 px-2.5 py-1 text-[11px] text-muted-foreground;
+  }
+
+  .bias-tag strong {
+    @apply flex h-4 min-w-4 items-center justify-center rounded-full bg-primary/10 px-1 font-mono font-medium text-primary;
+  }
+
+  .conclusion-section {
+    background:
+      radial-gradient(circle at 88% 14%, color-mix(in oklab, var(--primary) 36%, transparent) 0, transparent 28%),
+      oklch(0.255 0.015 58);
+  }
+
+  .source-card {
+    @apply rounded-sm border border-border bg-card p-5;
+  }
+
+  .source-card > span {
+    @apply text-[11px] tracking-[0.15em] text-primary;
+  }
+
+  .source-card h3 {
+    @apply mt-3 break-words font-serif text-base font-semibold leading-7 text-foreground;
+  }
+
+  .source-card p {
+    @apply mt-2 text-xs leading-6 text-muted-foreground;
+  }
+
+  .method-grid {
+    @apply grid bg-border md:grid-cols-2;
+    gap: 1px;
+  }
+
+  .method-grid > div {
+    @apply grid gap-2 bg-card px-5 py-4 sm:grid-cols-[6rem_1fr];
+  }
+
+  .method-grid dt {
+    @apply font-serif text-sm font-semibold text-foreground;
+  }
+
+  .method-grid dd {
+    @apply text-sm leading-6 text-muted-foreground;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-grid::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

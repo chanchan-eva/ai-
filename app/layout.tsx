@@ -1,23 +1,9 @@
-import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Noto_Serif_SC, Noto_Sans_SC } from 'next/font/google'
 import './globals.css'
 
-const notoSerif = Noto_Serif_SC({
-  variable: '--font-serif-sc',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-})
-const notoSans = Noto_Sans_SC({
-  variable: '--font-sans-sc',
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '700'],
-})
-
 export const metadata: Metadata = {
-  title: 'AI文化偏差测试器',
-  description: '比较 GPT、Claude、Gemini 对魏晋古文的解读，标注文化偏差',
-  generator: 'v0.app',
+  title: 'AI 文化解释偏差研究｜魏晋文本与大语言模型',
+  description: '比较 GPT、Claude、Gemini 对魏晋时期文本的解释框架，展示人工标注的文化偏差统计与典型案例。',
   icons: {
     icon: [
       {
@@ -38,11 +24,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  colorScheme: 'light',
+  themeColor: '#f5f0e5',
 }
 
 export default function RootLayout({
@@ -51,14 +34,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="zh-CN"
-      className={`${notoSerif.variable} ${notoSans.variable} bg-background`}
-    >
-      <body className="font-sans antialiased">
-        {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-      </body>
+    <html lang="zh-CN" className="bg-background">
+      <body className="font-sans antialiased">{children}</body>
     </html>
   )
 }
